@@ -7,8 +7,12 @@
 	Resultado da busca:
 	<ul>
 		<c:forEach var="empresa" items="${empresas}">
-			<li>${empresa.id}: ${empresa.nome}</li>
+			<li>${empresa.id}:${empresa.nome}</li>
 		</c:forEach>
 	</ul>
+	<form action="executa?tarefa=BuscaEmpresa" method="post">
+		Buscar Empresa: <input type="text" name="filtro" /> <input
+			type="submit" value="Buscar" />
+	</form>
 </body>
 </html>
